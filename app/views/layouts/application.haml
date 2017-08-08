@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Just4kids
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    #SITE_CONTAINER
+      .noop
+        #SITE_BACKGROUND
+          .custom-background-image
+        #SITE_ROOT
+          .master-page
+            = render 'partials/header'
+            #PAGE_CONTAINER
+              = yield
+            = render 'partials/footer'
