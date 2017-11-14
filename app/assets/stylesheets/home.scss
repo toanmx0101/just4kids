@@ -94,12 +94,7 @@ div {
   }
 }
 #PAGE_CONTAINER {
-  @include position_custom()
-  position: absolute;
-  width: 980px;
-  height: 1793px;
-  top: 130px;
-  left: 0px;
+  @include position_custom(980px, 1793px, 130px, 0px)
 }
 .header-inline-content {
    @include position_absolute(0, 0, 0, 0);
